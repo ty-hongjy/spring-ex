@@ -1,0 +1,17 @@
+spring:
+#  mvc:
+#    static-path-pattern: /abc/**
+  thymeleaf:
+#    prefix: classpath:/templates/
+    prefix: classpath:/templates/html/
+#    prefix: file:src/main/resources/templates/
+    suffix: .html
+#    mode: HTML5
+    encoding: UTF-8
+#    servlet:
+#      content-type: text/htmL
+    #关闭静态 页面的缓存
+    cache: false
+    #告诉springboot 直接从src的路径下去加载Thymeleaf 的页面模版
+    #作用:修改前端页面，不需要再重新编译，就能在浏览器刷新看到最新的修改效果
+    #注意:项目打包的时候，需要把这个配置注释掉
