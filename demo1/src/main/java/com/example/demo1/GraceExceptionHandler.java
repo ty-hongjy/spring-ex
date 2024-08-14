@@ -1,4 +1,11 @@
 package com.example.demo1;
+/*
+ * @Description:
+ * @Autor: name
+ * @Date: 2024-08-14 09:59:27
+ * @LastEditors: name
+ * @LastEditTime: 2024-08-14 13:57:19
+ */
 
 import com.example.demo1.util.JSONResult;
 import org.apache.tomcat.util.http.fileupload.impl.FileSizeLimitExceededException;
@@ -14,10 +21,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @ControllerAdvice
 public class GraceExceptionHandler {
-//    @ExceptionHandler(FileSizeLimitExceededException.class)
-//    @ResponseBody
-//    public JSONResult returnMaxFileSizeLimit(FileSizeLimitExceededException e) {
-//        return JSONResult.errorMsg("文件大小不能超过500KB");
-////        return JSONResult();
-//    }
+    @ExceptionHandler(FileSizeLimitExceededException.class)
+    @ResponseBody
+    public JSONResult returnMaxFileSizeLimit(FileSizeLimitExceededException e) {
+        return JSONResult.errorMsg("文件大小不能超过500KB");
+//        return JSONResult();
+    }
 }

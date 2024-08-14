@@ -1,4 +1,4 @@
-package com.imooc.utils;
+package com.example.demo1.util;
 
 /**
  * 
@@ -28,6 +28,25 @@ public class JSONResult {
     private Object data;
     
     private String ok;	// 不使用
+
+    public JSONResult(Integer status, String msg, Object data) {
+        this.status = status;
+        this.msg = msg;
+        this.data = data;
+    }
+
+    public JSONResult(Integer status, String msg, Object data, String ok) {
+        this.status = status;
+        this.msg = msg;
+        this.data = data;
+        this.ok = ok;
+    }
+
+    public JSONResult(Object data) {
+        this.status = 200;
+        this.msg = "OK";
+        this.data = data;
+    }
 
     public static JSONResult build(Integer status, String msg, Object data) {
         return new JSONResult(status, msg, data);
@@ -71,25 +90,6 @@ public class JSONResult {
 
     public JSONResult() {
 
-    }
-
-    public JSONResult(Integer status, String msg, Object data) {
-        this.status = status;
-        this.msg = msg;
-        this.data = data;
-    }
-    
-    public JSONResult(Integer status, String msg, Object data, String ok) {
-        this.status = status;
-        this.msg = msg;
-        this.data = data;
-        this.ok = ok;
-    }
-
-    public JSONResult(Object data) {
-        this.status = 200;
-        this.msg = "OK";
-        this.data = data;
     }
 
     public Boolean isOK() {
