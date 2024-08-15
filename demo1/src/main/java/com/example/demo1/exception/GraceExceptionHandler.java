@@ -1,4 +1,4 @@
-package com.example.demo1;
+package com.example.demo1.exception;
 /*
  * @Description:
  * @Autor: name
@@ -27,4 +27,11 @@ public class GraceExceptionHandler {
         return JSONResult.errorMsg("文件大小不能超过500KB");
 //        return JSONResult();
     }
+
+    @ExceptionHandler(FileSizeLimitExceededException.class)
+    @ResponseBody
+    public JSONResult returnMaxFileSizeLimit(MyException e) {
+        return JSONResult.errorMsg(e.getMessage());
+    }
+
 }
