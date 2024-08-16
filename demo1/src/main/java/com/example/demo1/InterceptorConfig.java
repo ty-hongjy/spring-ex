@@ -9,7 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class InterceptorConfig implements WebMvcConfigurer {
     @Bean
-    public UserInfoInterceptor userInfoOnterceptor(){
+    public UserInfoInterceptor userInfoInterceptor(){
         return new UserInfoInterceptor();
     }
 
@@ -19,7 +19,7 @@ public class InterceptorConfig implements WebMvcConfigurer {
      */
     @Override
     public void addInterceptors(InterceptorRegistry registry){
-        registry.addInterceptor(userInfoOnterceptor())
+        registry.addInterceptor(userInfoInterceptor())
                 .addPathPatterns("/upload");
 
     }
