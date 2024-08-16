@@ -21,12 +21,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @ControllerAdvice
 public class GraceExceptionHandler {
-    @ExceptionHandler(FileSizeLimitExceededException.class)
-    @ResponseBody
-    public JSONResult returnMaxFileSizeLimit(FileSizeLimitExceededException e) {
-        return JSONResult.errorMsg("文件大小不能超过500KB");
+//    @ExceptionHandler(FileSizeLimitExceededException.class)
+//    @ResponseBody
+//    public JSONResult returnMaxFileSizeLimit(FileSizeLimitExceededException e) {
+//        return JSONResult.errorMsg("文件大小不能超过500KB");
 //        return JSONResult();
-    }
+//    }
 
     @ExceptionHandler(FileSizeLimitExceededException.class)
     @ResponseBody

@@ -1,6 +1,7 @@
 spring:
-#  mvc:
-#    static-path-pattern: /abc/**
+  mvc:
+  #    static-path-pattern: /abc/**
+      static-path-pattern: /**
   thymeleaf:
 #    prefix: classpath:/templates/
     prefix: classpath:/templates/html/
